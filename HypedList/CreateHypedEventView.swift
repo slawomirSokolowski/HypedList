@@ -8,10 +8,38 @@
 import SwiftUI
 
 struct CreateHypedEventView: View {
+    @State var showTime = false
+    
+    @StateObject var hypedEvent = HypedEvent()
+    
     var body: some View {
-        Text("Hi I am hyped Event View")
+        Form {
+            Section {
+                LabelView(title: "title", iconSystemName: "keyboard", color: .green)
+                TextField("Family vacation", text: $hypedEvent.title)
+            }
+            Section {
+                LabelView(title: "Date", iconSystemName: "calendar", color: .blue)
+            }
+            Section {
+                DatePicker("Date", selection: $hypedEvent.date, displayedComponents: showTime ? [.date, .hourAndMinute] : [.date])
+                    .datePickerStyle(GraphicalDatePickerStyle())
+                Toggle(isOn: $showTime) {
+                    LabelView(title: "Time", iconSystemName: "clock", color: .blue)
+                }
+            }
+            Section {
+                LabelView(title: "Color", iconSystemName: "eyedropper", color: .orange)
+                ColorPicker("Color", selection: $hypedEvent.color)
+            }
+            Section {
+                LabelView(title: "URL", iconSystemName: "link", color: .orange)
+                TextField("Nintendo", text: $hypedEvent.url)
+            }
+        }
     }
 }
+
 
 struct CreateHypedEventView_Previews: PreviewProvider {
     static var previews: some View {
