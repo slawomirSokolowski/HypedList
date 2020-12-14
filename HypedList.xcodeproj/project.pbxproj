@@ -12,6 +12,7 @@
 		1822A10925878C9D006EE6F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1822A10825878C9D006EE6F1 /* Assets.xcassets */; };
 		1822A10C25878C9D006EE6F1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1822A10B25878C9D006EE6F1 /* Preview Assets.xcassets */; };
 		1822A11625879113006EE6F1 /* UpcomingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1822A11525879113006EE6F1 /* UpcomingView.swift */; };
+		1822A11A2587A134006EE6F1 /* CreateHypedEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1822A1192587A134006EE6F1 /* CreateHypedEventView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		1822A10B25878C9D006EE6F1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1822A10D25878C9D006EE6F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1822A11525879113006EE6F1 /* UpcomingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingView.swift; sourceTree = "<group>"; };
+		1822A1192587A134006EE6F1 /* CreateHypedEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateHypedEventView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				1822A10425878C9B006EE6F1 /* HypedListApp.swift */,
 				1822A10625878C9B006EE6F1 /* HypedListTabView.swift */,
 				1822A11525879113006EE6F1 /* UpcomingView.swift */,
+				1822A1192587A134006EE6F1 /* CreateHypedEventView.swift */,
 				1822A10825878C9D006EE6F1 /* Assets.xcassets */,
 				1822A10D25878C9D006EE6F1 /* Info.plist */,
 				1822A10A25878C9D006EE6F1 /* Preview Content */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1822A11A2587A134006EE6F1 /* CreateHypedEventView.swift in Sources */,
 				1822A10725878C9B006EE6F1 /* HypedListTabView.swift in Sources */,
 				1822A10525878C9B006EE6F1 /* HypedListApp.swift in Sources */,
 				1822A11625879113006EE6F1 /* UpcomingView.swift in Sources */,
