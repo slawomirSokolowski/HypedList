@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct CreateHypedEventView: View {
-    @State var showTime = false
     
+    @State var showTime = false
+    @State var showImagePicker = false
     @StateObject var hypedEvent = HypedEvent()
     
     var body: some View {
@@ -28,6 +29,17 @@ struct CreateHypedEventView: View {
                     LabelView(title: "Time", iconSystemName: "clock", color: .blue)
                 }
             }
+            
+            Button(action: {
+                showImagePicker = true
+            }) {
+                Text("Pick Image")
+            }
+            .sheet(isPresented: $showImagePicker) {
+                ImagePicker()
+            }
+            
+            
             Section {
                 LabelView(title: "Color", iconSystemName: "eyedropper", color: .orange)
                 ColorPicker("Color", selection: $hypedEvent.color)
