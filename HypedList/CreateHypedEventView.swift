@@ -45,7 +45,7 @@ struct CreateHypedEventView: View {
                         LabelView(title: "Image", iconSystemName: "camera", color: .purple)
                         Spacer()
                         Button(action: {
-                            hypedEvent.imageData = nil
+                              hypedEvent.imageData = nil
                         }) {
                             Text("Remove Image")
                                 .foregroundColor(.red)
