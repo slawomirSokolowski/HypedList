@@ -29,16 +29,42 @@ struct CreateHypedEventView: View {
                     LabelView(title: "Time", iconSystemName: "clock", color: .blue)
                 }
             }
-            
-            Button(action: {
-                showImagePicker = true
-            }) {
-                Text("Pick Image")
+            Section {
+                if hypedEvent.imageData == nil {
+                    HStack {
+                        LabelView(title: "Image", iconSystemName: "camera", color: .purple)
+                        Spacer()
+                        Button(action: {
+                            showImagePicker = true
+                        }) {
+                            Text("Pick Image")
+                        }
+                    }
+                } else {
+                    HStack {
+                        LabelView(title: "Image", iconSystemName: "camera", color: .purple)
+                        Spacer()
+                        Button(action: {
+                            hypedEvent.imageData = nil
+                        }) {
+                            Text("Remove Image")
+                                .foregroundColor(.red)
+                        }
+                        .buttonStyle(BorderlessButtonStyle())
+                    }
+                    Button(action: {
+                        showImagePicker = true
+                    }) {
+                        hypedEvent.image()!
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                    }
+                    .buttonStyle(BorderlessButtonStyle())
+                }
             }
-            .sheet(isPresented: $showImagePicker) {
-                ImagePicker()
-            }
-            
+                .sheet(isPresented: $showImagePicker) {
+                    ImagePicker(imageData: $hypedEvent.imageData)
+                }
             
             Section {
                 LabelView(title: "Color", iconSystemName: "eyedropper", color: .orange)
