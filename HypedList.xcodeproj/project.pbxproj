@@ -17,6 +17,7 @@
 		185209B52587EC900076B6C5 /* LabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185209B42587EC900076B6C5 /* LabelView.swift */; };
 		1859540C258A0DBE00789209 /* HypedEventTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1859540B258A0DBE00789209 /* HypedEventTileView.swift */; };
 		18595410258A3BF000789209 /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = 1859540F258A3BF000789209 /* SwiftDate */; };
+		18595413258A581C00789209 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18595412258A581C00789209 /* DataController.swift */; };
 		185CAD322588B671002F3636 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185CAD312588B671002F3636 /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		1822A11D2587A266006EE6F1 /* HypedEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypedEvent.swift; sourceTree = "<group>"; };
 		185209B42587EC900076B6C5 /* LabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelView.swift; sourceTree = "<group>"; };
 		1859540B258A0DBE00789209 /* HypedEventTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypedEventTileView.swift; sourceTree = "<group>"; };
+		18595412258A581C00789209 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		185CAD312588B671002F3636 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,6 +76,7 @@
 				1822A11D2587A266006EE6F1 /* HypedEvent.swift */,
 				185209B42587EC900076B6C5 /* LabelView.swift */,
 				185CAD312588B671002F3636 /* ImagePicker.swift */,
+				18595412258A581C00789209 /* DataController.swift */,
 				1822A10825878C9D006EE6F1 /* Assets.xcassets */,
 				1822A10D25878C9D006EE6F1 /* Info.plist */,
 				1822A10A25878C9D006EE6F1 /* Preview Content */,
@@ -168,6 +171,7 @@
 				1822A11A2587A134006EE6F1 /* CreateHypedEventView.swift in Sources */,
 				1822A11E2587A266006EE6F1 /* HypedEvent.swift in Sources */,
 				1822A10725878C9B006EE6F1 /* HypedListTabView.swift in Sources */,
+				18595413258A581C00789209 /* DataController.swift in Sources */,
 				185CAD322588B671002F3636 /* ImagePicker.swift in Sources */,
 				1822A10525878C9B006EE6F1 /* HypedListApp.swift in Sources */,
 				1822A11625879113006EE6F1 /* UpcomingView.swift in Sources */,
