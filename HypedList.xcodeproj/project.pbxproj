@@ -18,6 +18,7 @@
 		1859540C258A0DBE00789209 /* HypedEventTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1859540B258A0DBE00789209 /* HypedEventTileView.swift */; };
 		18595410258A3BF000789209 /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = 1859540F258A3BF000789209 /* SwiftDate */; };
 		18595413258A581C00789209 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18595412258A581C00789209 /* DataController.swift */; };
+		1859541B258A6B1400789209 /* UIColor_Hex_Swift in Frameworks */ = {isa = PBXBuildFile; productRef = 1859541A258A6B1400789209 /* UIColor_Hex_Swift */; };
 		185CAD322588B671002F3636 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185CAD312588B671002F3636 /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1859541B258A6B1400789209 /* UIColor_Hex_Swift in Frameworks */,
 				18595410258A3BF000789209 /* SwiftDate in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -70,13 +72,8 @@
 			children = (
 				1822A10425878C9B006EE6F1 /* HypedListApp.swift */,
 				1822A10625878C9B006EE6F1 /* HypedListTabView.swift */,
-				1822A11525879113006EE6F1 /* UpcomingView.swift */,
-				1859540B258A0DBE00789209 /* HypedEventTileView.swift */,
-				1822A1192587A134006EE6F1 /* CreateHypedEventView.swift */,
-				1822A11D2587A266006EE6F1 /* HypedEvent.swift */,
-				185209B42587EC900076B6C5 /* LabelView.swift */,
-				185CAD312588B671002F3636 /* ImagePicker.swift */,
-				18595412258A581C00789209 /* DataController.swift */,
+				18595416258A665D00789209 /* Views */,
+				18595417258A667100789209 /* Data */,
 				1822A10825878C9D006EE6F1 /* Assets.xcassets */,
 				1822A10D25878C9D006EE6F1 /* Info.plist */,
 				1822A10A25878C9D006EE6F1 /* Preview Content */,
@@ -90,6 +87,27 @@
 				1822A10B25878C9D006EE6F1 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		18595416258A665D00789209 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				185CAD312588B671002F3636 /* ImagePicker.swift */,
+				185209B42587EC900076B6C5 /* LabelView.swift */,
+				1822A1192587A134006EE6F1 /* CreateHypedEventView.swift */,
+				1859540B258A0DBE00789209 /* HypedEventTileView.swift */,
+				1822A11525879113006EE6F1 /* UpcomingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		18595417258A667100789209 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				1822A11D2587A266006EE6F1 /* HypedEvent.swift */,
+				18595412258A581C00789209 /* DataController.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,6 +128,7 @@
 			name = HypedList;
 			packageProductDependencies = (
 				1859540F258A3BF000789209 /* SwiftDate */,
+				1859541A258A6B1400789209 /* UIColor_Hex_Swift */,
 			);
 			productName = HypedList;
 			productReference = 1822A10125878C9B006EE6F1 /* HypedList.app */;
@@ -140,6 +159,7 @@
 			mainGroup = 1822A0F825878C9B006EE6F1;
 			packageReferences = (
 				1859540E258A3BF000789209 /* XCRemoteSwiftPackageReference "SwiftDate" */,
+				18595419258A6B1400789209 /* XCRemoteSwiftPackageReference "UIColor-Hex-Swift" */,
 			);
 			productRefGroup = 1822A10225878C9B006EE6F1 /* Products */;
 			projectDirPath = "";
@@ -374,6 +394,14 @@
 				minimumVersion = 6.3.1;
 			};
 		};
+		18595419258A6B1400789209 /* XCRemoteSwiftPackageReference "UIColor-Hex-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yeahdongcn/UIColor-Hex-Swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -381,6 +409,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1859540E258A3BF000789209 /* XCRemoteSwiftPackageReference "SwiftDate" */;
 			productName = SwiftDate;
+		};
+		1859541A258A6B1400789209 /* UIColor_Hex_Swift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18595419258A6B1400789209 /* XCRemoteSwiftPackageReference "UIColor-Hex-Swift" */;
+			productName = UIColor_Hex_Swift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

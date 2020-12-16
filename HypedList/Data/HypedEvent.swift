@@ -8,8 +8,9 @@
 import Foundation
 import SwiftUI
 import SwiftDate
+import UIColor_Hex_Swift
 
-class HypedEvent: ObservableObject, Identifiable  {
+class HypedEvent: ObservableObject, Identifiable, Codable  {
     
     var id = UUID().uuidString
     var date = Date()
@@ -18,7 +19,40 @@ class HypedEvent: ObservableObject, Identifiable  {
     @Published var imageData: Data?
     var color = Color.purple
     
-    func image() -> Image? {
+    enum CodingKeys: String, CodingKey {
+        case id
+        case date
+        case title
+        case url
+        case imageData
+        case color
+    }
+    
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(id, forKey: CodingKeys.id)
+        try container.encode(date, forKey: CodingKeys.date)
+        try container.encode(title, forKey: CodingKeys.title)
+        try container.encode(url, forKey: CodingKeys.url)
+        try container.encode(imageData, forKey: CodingKeys.imageData)
+        try container.encode(UIColor(color).hexString(), forKey: CodingKeys.color)
+    }
+    required init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        id = try values.decode(String.self, forKey: .id)
+        date = try values.decode(Date.self, forKey: .date)
+        title = try values.decode(String.self, forKey: .title)
+        url = try values.decode(String.self, forKey: .url)
+        imageData = try? values.decode(Data.self, forKey: .imageData)
+        
+        let colorHex = try values.decode(String.self, forKey: .color)
+        color = Color(UIColor(colorHex))
+    }
+    
+    init() {
+    }
+        
+        func image() -> Image? {
         if let data = imageData {
             if let uiImage = UIImage(data: data) {
                 return Image(uiImage: uiImage)
