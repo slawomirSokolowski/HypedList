@@ -31,9 +31,9 @@ struct HypedEventTileView: View {
             HStack {
                 Image(systemName: "calendar")
                     .foregroundColor(.red)
-                Text("SEP 4")
+                Text(hypedEvent.dateAsString())
                 Spacer()
-                Text("Next")
+                Text(hypedEvent.timeFromNow())
                 Image(systemName: "clock.fill")
                     .foregroundColor(.blue)
             }

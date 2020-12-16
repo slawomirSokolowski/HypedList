@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,7 @@
 		1822A11E2587A266006EE6F1 /* HypedEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1822A11D2587A266006EE6F1 /* HypedEvent.swift */; };
 		185209B52587EC900076B6C5 /* LabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185209B42587EC900076B6C5 /* LabelView.swift */; };
 		1859540C258A0DBE00789209 /* HypedEventTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1859540B258A0DBE00789209 /* HypedEventTileView.swift */; };
+		18595410258A3BF000789209 /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = 1859540F258A3BF000789209 /* SwiftDate */; };
 		185CAD322588B671002F3636 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185CAD312588B671002F3636 /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18595410258A3BF000789209 /* SwiftDate in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +105,9 @@
 			dependencies = (
 			);
 			name = HypedList;
+			packageProductDependencies = (
+				1859540F258A3BF000789209 /* SwiftDate */,
+			);
 			productName = HypedList;
 			productReference = 1822A10125878C9B006EE6F1 /* HypedList.app */;
 			productType = "com.apple.product-type.application";
@@ -130,6 +135,9 @@
 				Base,
 			);
 			mainGroup = 1822A0F825878C9B006EE6F1;
+			packageReferences = (
+				1859540E258A3BF000789209 /* XCRemoteSwiftPackageReference "SwiftDate" */,
+			);
 			productRefGroup = 1822A10225878C9B006EE6F1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -352,6 +360,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1859540E258A3BF000789209 /* XCRemoteSwiftPackageReference "SwiftDate" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/malcommac/SwiftDate.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.3.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1859540F258A3BF000789209 /* SwiftDate */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1859540E258A3BF000789209 /* XCRemoteSwiftPackageReference "SwiftDate" */;
+			productName = SwiftDate;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1822A0F925878C9B006EE6F1 /* Project object */;
 }
