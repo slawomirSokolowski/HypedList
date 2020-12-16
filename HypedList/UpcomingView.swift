@@ -13,26 +13,30 @@ struct UpcomingView: View {
     var hypedEvents: [HypedEvent] = []
     
     var body: some View {
-        VStack {
-            if hypedEvents.count == 0 {
-                Text("Nothing to look forward to. 😢. bla, bla bla")
-                    .bold()
-                    .multilineTextAlignment(.leading)
-            } else {
-                
+        ScrollView {
+            VStack {
+                if hypedEvents.count == 0 {
+                    Text("Nothing to look forward to. 😢. bla, bla bla")
+                        .bold()
+                        .multilineTextAlignment(.leading)
+                } else {
+                    ForEach(hypedEvents) { hypedEvent in
+                        Text(hypedEvent.title)
+                    }
+                }
             }
+            Text("Upcoming!")
+                .navigationTitle("Upcoming")
+                .navigationBarItems(trailing: Button(action: {
+                    showingCreateView = true
+                }) {
+                    Image(systemName: "calendar.badge.plus")
+                }
+                .sheet(isPresented:  $showingCreateView ) {
+                    CreateHypedEventView()
+                }
+                )
         }
-        Text("Upcoming!")
-            .navigationTitle("Upcoming")
-            .navigationBarItems(trailing: Button(action: {
-                showingCreateView = true
-            }) {
-                Image(systemName: "calendar.badge.plus")
-            }
-            .sheet(isPresented:  $showingCreateView ) {
-                CreateHypedEventView()
-            }
-            )
     }
 }
 
