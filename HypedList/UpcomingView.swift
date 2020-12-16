@@ -21,7 +21,7 @@ struct UpcomingView: View {
                         .multilineTextAlignment(.leading)
                 } else {
                     ForEach(hypedEvents) { hypedEvent in
-                        Text(hypedEvent.title)
+                        HypedEventTileView(hypedEvent: hypedEvent)
                     }
                 }
             }

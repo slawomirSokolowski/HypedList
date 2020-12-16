@@ -15,6 +15,7 @@
 		1822A11A2587A134006EE6F1 /* CreateHypedEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1822A1192587A134006EE6F1 /* CreateHypedEventView.swift */; };
 		1822A11E2587A266006EE6F1 /* HypedEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1822A11D2587A266006EE6F1 /* HypedEvent.swift */; };
 		185209B52587EC900076B6C5 /* LabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185209B42587EC900076B6C5 /* LabelView.swift */; };
+		1859540C258A0DBE00789209 /* HypedEventTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1859540B258A0DBE00789209 /* HypedEventTileView.swift */; };
 		185CAD322588B671002F3636 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185CAD312588B671002F3636 /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		1822A1192587A134006EE6F1 /* CreateHypedEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateHypedEventView.swift; sourceTree = "<group>"; };
 		1822A11D2587A266006EE6F1 /* HypedEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypedEvent.swift; sourceTree = "<group>"; };
 		185209B42587EC900076B6C5 /* LabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelView.swift; sourceTree = "<group>"; };
+		1859540B258A0DBE00789209 /* HypedEventTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypedEventTileView.swift; sourceTree = "<group>"; };
 		185CAD312588B671002F3636 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,6 +67,7 @@
 				1822A10425878C9B006EE6F1 /* HypedListApp.swift */,
 				1822A10625878C9B006EE6F1 /* HypedListTabView.swift */,
 				1822A11525879113006EE6F1 /* UpcomingView.swift */,
+				1859540B258A0DBE00789209 /* HypedEventTileView.swift */,
 				1822A1192587A134006EE6F1 /* CreateHypedEventView.swift */,
 				1822A11D2587A266006EE6F1 /* HypedEvent.swift */,
 				185209B42587EC900076B6C5 /* LabelView.swift */,
@@ -153,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1859540C258A0DBE00789209 /* HypedEventTileView.swift in Sources */,
 				1822A11A2587A134006EE6F1 /* CreateHypedEventView.swift in Sources */,
 				1822A11E2587A266006EE6F1 /* HypedEvent.swift in Sources */,
 				1822A10725878C9B006EE6F1 /* HypedListTabView.swift in Sources */,
