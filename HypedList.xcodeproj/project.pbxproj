@@ -15,10 +15,12 @@
 		1822A11A2587A134006EE6F1 /* CreateHypedEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1822A1192587A134006EE6F1 /* CreateHypedEventView.swift */; };
 		1822A11E2587A266006EE6F1 /* HypedEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1822A11D2587A266006EE6F1 /* HypedEvent.swift */; };
 		185209B52587EC900076B6C5 /* LabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185209B42587EC900076B6C5 /* LabelView.swift */; };
+		18594AE0258B8E72009C7C31 /* HypedEventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18594ADF258B8E72009C7C31 /* HypedEventListView.swift */; };
 		1859540C258A0DBE00789209 /* HypedEventTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1859540B258A0DBE00789209 /* HypedEventTileView.swift */; };
 		18595410258A3BF000789209 /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = 1859540F258A3BF000789209 /* SwiftDate */; };
 		18595413258A581C00789209 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18595412258A581C00789209 /* DataController.swift */; };
 		1859541B258A6B1400789209 /* UIColor_Hex_Swift in Frameworks */ = {isa = PBXBuildFile; productRef = 1859541A258A6B1400789209 /* UIColor_Hex_Swift */; };
+		1859B4EB258BA367002F08BF /* PastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1859B4EA258BA367002F08BF /* PastView.swift */; };
 		185CAD322588B671002F3636 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185CAD312588B671002F3636 /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,8 +35,10 @@
 		1822A1192587A134006EE6F1 /* CreateHypedEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateHypedEventView.swift; sourceTree = "<group>"; };
 		1822A11D2587A266006EE6F1 /* HypedEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypedEvent.swift; sourceTree = "<group>"; };
 		185209B42587EC900076B6C5 /* LabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelView.swift; sourceTree = "<group>"; };
+		18594ADF258B8E72009C7C31 /* HypedEventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypedEventListView.swift; sourceTree = "<group>"; };
 		1859540B258A0DBE00789209 /* HypedEventTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypedEventTileView.swift; sourceTree = "<group>"; };
 		18595412258A581C00789209 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		1859B4EA258BA367002F08BF /* PastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastView.swift; sourceTree = "<group>"; };
 		185CAD312588B671002F3636 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,6 +101,8 @@
 				1822A1192587A134006EE6F1 /* CreateHypedEventView.swift */,
 				1859540B258A0DBE00789209 /* HypedEventTileView.swift */,
 				1822A11525879113006EE6F1 /* UpcomingView.swift */,
+				18594ADF258B8E72009C7C31 /* HypedEventListView.swift */,
+				1859B4EA258BA367002F08BF /* PastView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -189,12 +195,14 @@
 			files = (
 				1859540C258A0DBE00789209 /* HypedEventTileView.swift in Sources */,
 				1822A11A2587A134006EE6F1 /* CreateHypedEventView.swift in Sources */,
+				1859B4EB258BA367002F08BF /* PastView.swift in Sources */,
 				1822A11E2587A266006EE6F1 /* HypedEvent.swift in Sources */,
 				1822A10725878C9B006EE6F1 /* HypedListTabView.swift in Sources */,
 				18595413258A581C00789209 /* DataController.swift in Sources */,
 				185CAD322588B671002F3636 /* ImagePicker.swift in Sources */,
 				1822A10525878C9B006EE6F1 /* HypedListApp.swift in Sources */,
 				1822A11625879113006EE6F1 /* UpcomingView.swift in Sources */,
+				18594AE0258B8E72009C7C31 /* HypedEventListView.swift in Sources */,
 				185209B52587EC900076B6C5 /* LabelView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
