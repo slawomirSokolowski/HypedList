@@ -6,10 +6,14 @@
 //
 
 import Foundation
+import SwiftDate
+import UIColor_Hex_Swift
+import SwiftUI
 
 class DataController: ObservableObject {
     static var shared = DataController()
     @Published var hypedEvents: [HypedEvent] = []
+    @Published var discoverHypedEvents: [HypedEvent] = []
     
     var upcomingHypedEvents: [HypedEvent] {
         return hypedEvents.filter { $0.date > Date().dateAt(.startOfDay) }.sorted { $0.date < $1.date }
@@ -47,12 +51,39 @@ class DataController: ObservableObject {
             URLSession.shared.dataTask(with: request) { (data, response, error) in
                 if let webData = data {
                     if let json = try? JSONSerialization.jsonObject(with: webData, options: []) as? [[String:String]] {
+                        
+                        var hypedEventsToAdd: [HypedEvent] = []
+                        
                         for jsonHypedEvent in json {
-                            print(jsonHypedEvent)
+                            let hypedEvent = HypedEvent()
+                            if let id = jsonHypedEvent["id"] {
+                                hypedEvent.id = id
+                            }
+                            if let dateString = jsonHypedEvent["date"] {
+                                if let dateInRegion = dateString.toDate() {
+                                    hypedEvent.date = dateInRegion.date
+                                }
+                            }
+                            if let title = jsonHypedEvent["title"] {
+                                hypedEvent.title = title
+                            }
+                            if let url = jsonHypedEvent["url"] {
+                                hypedEvent.url = url
+                            }
+                            if let colorHex = jsonHypedEvent["color"] {
+                                hypedEvent.color = Color(UIColor(colorHex))
+                            }
+                            if let imageURL = jsonHypedEvent["imageURL"] {
+                            }
+                            hypedEventsToAdd.append(hypedEvent)
                         }
+                        DispatchQueue.main.async {
+                            self.discoverHypedEvents = hypedEventsToAdd
+                        }
+                        
                     }
                 }
-            } .resume()
+            }.resume()
         }
     }
 }
