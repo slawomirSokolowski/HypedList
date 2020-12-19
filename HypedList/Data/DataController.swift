@@ -40,5 +40,20 @@ class DataController: ObservableObject {
             }
         }
     }
+    
+    func getDiscoverEvents() {
+        if let url = URL(string: "https://api.jsonbin.io/b/5fdcc4e1dcfb842f3409e63b/1") {
+            let request = URLRequest(url: url)
+            URLSession.shared.dataTask(with: request) { (data, response, error) in
+                if let webData = data {
+                    if let json = try? JSONSerialization.jsonObject(with: webData, options: []) as? [[String:String]] {
+                        for jsonHypedEvent in json {
+                            print(jsonHypedEvent)
+                        }
+                    }
+                }
+            } .resume()
+        }
+    }
 }
 
