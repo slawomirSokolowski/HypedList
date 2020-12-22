@@ -98,7 +98,7 @@ var testHypedEvent2: HypedEvent {
     hypedEvent.title = "trip to Jakson & Tennesse"
     hypedEvent.color = .blue
     hypedEvent.url = "jakson.com"
-    hypedEvent.date = Date()
+    hypedEvent.date = Date() + 5.days
     
     return hypedEvent
 }

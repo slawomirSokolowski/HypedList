@@ -46,7 +46,7 @@ class DataController: ObservableObject {
     }
     
     func getDiscoverEvents() {
-        if let url = URL(string: "https://api.jsonbin.io/b/5fdcc4e1dcfb842f3409e63b/1") {
+        if let url = URL(string: "https://api.jsonbin.io/b/5fe1fd5c4b8f7e61dfd1ce45") {
             let request = URLRequest(url: url)
             URLSession.shared.dataTask(with: request) { (data, response, error) in
                 if let webData = data {
@@ -71,9 +71,10 @@ class DataController: ObservableObject {
                                 hypedEvent.url = url
                             }
                             if let colorHex = jsonHypedEvent["color"] {
-                                hypedEvent.color = Color(UIColor(colorHex))
+                                hypedEvent.color = Color(UIColor("#FF0000"))
                             }
                             if let imageURL = jsonHypedEvent["imageURL"] {
+                                
                             }
                             hypedEventsToAdd.append(hypedEvent)
                         }
